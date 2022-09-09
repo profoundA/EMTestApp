@@ -50,13 +50,13 @@ struct DetailsView: View {
                                         .renderingMode(.template)
                                         .foregroundColor(model.isFavorites ? .red : .white)
                                 }
-                        }
+                        }.padding(.top)
                         StarsView(rating: Float(model.rating))
                             .frame(width: 350, alignment: .leading)
                         
                         DetailsCategoryView(selectedTab: $selectedTab)
                             .padding(.top)
-                            .padding(.trailing, 3)
+                            
                             
                         HStack(spacing: 50) {
                             DetailsSpecView(image: "CPU", specs: model.cpu)
@@ -64,6 +64,7 @@ struct DetailsView: View {
                             DetailsSpecView(image: "RAM", specs: model.ssd)
                             DetailsSpecView(image: "SD", specs: model.sd)
                         }
+                        .frame(height: 70)
                         .padding(.top, 21)
                         .padding(.horizontal, 35)
 
@@ -97,7 +98,7 @@ struct DetailsView: View {
                                 .padding(.top)
                         }
                     }
-                    .padding(.top, -10)
+                    .padding(.bottom, 20)
                     .padding(.leading)
                 }
         }
@@ -115,6 +116,6 @@ struct DetailsView: View {
 }
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(model: DetailModel(cpu: "Exynos 990", camera: "12", capacity: ["12", "24"], color: ["#772D03", "#010035"], id: "12", images: ["https://avatars.mds.yandex.net/get-mpic/5235334/img_id5575010630545284324.png/orig", "https://www.manualspdf.ru/thumbs/products/l/1260237-samsung-galaxy-note-20-ultra.jpg"], isFavorites: false, price: 1500, rating: 4.5, sd: "256", ssd: "8", title: "Galaxy Note 20 Ultra"))
+        DetailsView(model: DetailModel(cpu: "Exynos 990", camera: "120000", capacity: ["12", "24"], color: ["#772D03", "#010035"], id: "12", images: ["https://avatars.mds.yandex.net/get-mpic/5235334/img_id5575010630545284324.png/orig", "https://www.manualspdf.ru/thumbs/products/l/1260237-samsung-galaxy-note-20-ultra.jpg"], isFavorites: false, price: 1500, rating: 4.5, sd: "256 GB", ssd: "8 GB", title: "Galaxy Note 20 Ultra"))
     }
 }

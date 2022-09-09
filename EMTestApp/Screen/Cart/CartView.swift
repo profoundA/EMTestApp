@@ -25,7 +25,7 @@ struct CartView: View {
             RoundedRectangle(cornerRadius: 30)
                 .fill(Color.ecColor(.blue))
                 .ignoresSafeArea(.all, edges: .bottom)
-                .frame(height: 580)
+                .frame(height: 555)
                 .shadow(color: .black.opacity(0.1), radius: 20, x: 0, y: 0)
                 .overlay {
                     VStack {
@@ -74,11 +74,11 @@ struct CartView: View {
                                             .font(Font.markpro(.bold, size: 20))
                                             .foregroundColor(.white)
                                     }
-                                    .padding(.top, 10)
+
                             }
-                        }
+                        }.padding(.bottom, 30)
                     }
-                    .padding(.top, 30)
+                    .padding(.top, 20)
                 }
         }.background(Color.ecColor(.gray))
     }

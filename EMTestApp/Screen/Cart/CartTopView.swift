@@ -12,34 +12,36 @@ struct CartTopView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        HStack {
-            Button(action: { dismiss() }) {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.ecColor(.blue))
-                    .frame(width: 37, height: 37)
-                    .overlay{
-                        Image("LeftArrow")
-                            .renderingMode(.template)
-                            .foregroundColor(.white)
-                            .rotationEffect(.degrees(270))
-                    }
-            }
-            .padding(.horizontal, 32)
-            Spacer()
+        VStack {
             HStack {
-                Text("Add address")
-                    .font(Font.markpro(.medium, size: 15))
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.ecColor(.orange))
-                    .frame(width: 37, height: 37)
-                    .overlay {
-                        Image("Pointer")
-                            .renderingMode(.template)
-                            .foregroundColor(.white)
-                        
-                    }
+                Button(action: { dismiss() }) {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.ecColor(.blue))
+                        .frame(width: 37, height: 37)
+                        .overlay{
+                            Image("LeftArrow")
+                                .renderingMode(.template)
+                                .foregroundColor(.white)
+                                .rotationEffect(.degrees(270))
+                        }
+                }
+                .padding(.horizontal, 32)
+                Spacer()
+                HStack {
+                    Text("Add address")
+                        .font(Font.markpro(.medium, size: 15))
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.ecColor(.orange))
+                        .frame(width: 37, height: 37)
+                        .overlay {
+                            Image("Pointer")
+                                .renderingMode(.template)
+                                .foregroundColor(.white)
+                            
+                        }
+                }
+                .padding(.horizontal, 35)
             }
-            .padding(.horizontal, 35)
         }
     }
 }
