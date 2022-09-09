@@ -81,14 +81,6 @@ struct CartView: View {
                     .padding(.top, 20)
                 }
         }
-        .background(Color.ecColor(.gray))
-        .gesture(
-            DragGesture().onEnded({ value in
-                if value.location.y - value.startLocation.y > 150 {
-                    dismiss()
-                }
-            })
-        )
     }
 }
 
