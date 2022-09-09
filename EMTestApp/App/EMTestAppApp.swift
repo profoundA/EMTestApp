@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct EMTestAppApp: App {
+    
+    @StateObject var viewModel: ECViewModel = ECViewModel(service: NetworkService())
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
+                .environmentObject(viewModel)
         }
     }
 }
