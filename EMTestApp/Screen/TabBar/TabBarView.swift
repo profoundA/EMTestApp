@@ -41,10 +41,9 @@ struct TabBarView: View {
                             }
                     }
                     .fullScreenCover(isPresented: $isPresented) {
+                        
                         if let cart = viewModel.cart {
                         CartView(model: cart)
-                        } else {
-                            CartView(model: CartModel(basket: [Basket(id: 0, images: "", price: 0, title: "-")], delivery: "-", id: "-", total: 0))
                         }
                     }
                     Button(action: {}) {
