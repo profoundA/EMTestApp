@@ -15,14 +15,15 @@ struct BestSellerItemView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
                 .fill(.white)
-                .frame(width: 181, height: 227)
+                .frame(width: 170, height: 230)
                 .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 0)
                 .overlay {
                     VStack {
                         AsyncImage(url: URL(string: model.picture)) { image in
                             image.resizable()
-                                .frame(width: 168, height: 187)
-                                .scaledToFit()
+                                .frame(width: 168, height: 180)
+                                .scaledToFill()
+                                .padding(.bottom, 35)
                                 .overlay {
                                     Circle()
                                         .fill(.white)
@@ -32,7 +33,7 @@ struct BestSellerItemView: View {
                                                 .foregroundColor(.red)
                                         )
                                         .frame(width: 26, height: 26)
-                                        .padding(.bottom, 155)
+                                        .padding(.bottom, 195)
                                         .padding(.leading, 125)
                                         .shadow(color: .black.opacity(0.1), radius: 8, x: 0, y: 0)
                                     
@@ -41,7 +42,6 @@ struct BestSellerItemView: View {
                             VStack {
                                 Text(model.title)
                                     .font(Font.markpro(.regular, size: 10))
-                                    .offset(y: 2)
                                
                                 HStack {
                                     Text("$\(model.discountPrice)")
@@ -51,7 +51,7 @@ struct BestSellerItemView: View {
                                         .foregroundColor(Color.ecColor(.itemGray))
                                         .strikethrough()
                                 }
-                            }.padding(.top, 193)
+                            }.padding(.top, 173)
                         
                                 
                             
