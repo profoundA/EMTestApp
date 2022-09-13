@@ -23,12 +23,12 @@ struct DetailsView: View {
             DetailsTopView()
             
             GeometryReader { reader in
-                ACarousel(model.images.indices, id: \.self, spacing: 100, headspace: 0, sidesScaling: 0.7, isWrap: false, autoScroll: .inactive, content: { index in
+                ACarousel(model.images.indices, id: \.self, spacing: reader.size.width * 0.26, headspace: 0, sidesScaling: 0.7, isWrap: false, autoScroll: .inactive, content: { index in
                     HStack {
                         DetailsItemView(image: model.images[index])
                     }
                 })
-                .frame(width: reader.size.width)
+                .frame(width: reader.size.width, height: reader.size.height)
                 
             }
             
@@ -95,7 +95,7 @@ struct DetailsView: View {
                                             .foregroundColor(.white)
                                     }
                                 }
-                                .padding(.top)
+                                .frame(width: 355, height: 54)
                         }
                     }
                     .padding(.bottom, 20)

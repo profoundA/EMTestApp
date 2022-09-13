@@ -15,6 +15,7 @@ struct DetailsItemView: View {
         ZStack {
             AsyncImage(url: URL(string: image)) { image in
                 image.resizable()
+                    .frame(width: 240, height: 270)
                     .scaledToFit()
 //                    .scaleEffect(1, anchor: .center)
                     .padding(.vertical,10)
