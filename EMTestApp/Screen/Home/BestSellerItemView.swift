@@ -37,18 +37,7 @@ struct BestSellerItemView: View {
                                         .shadow(color: .black.opacity(0.1), radius: 8, x: 0, y: 0)
                                     
                                 }
-                            
-                            HStack {
-                                Text("$\(model.discountPrice)")
-                                    .font(Font.markpro(.bold, size: 16))
-                                Text("$\(model.priceWithoutDiscount)")
-                                    .font(Font.markpro(.medium, size: 10))
-                                    .foregroundColor(Color.ecColor(.itemGray))
-                                    .strikethrough()
-                            } .padding(.top, -10)
-                            Text(model.title)
-                                .font(Font.markpro(.regular, size: 10))
-                                .offset(y: 1)
+                        
                                 
                             
                         } placeholder: {
@@ -58,6 +47,18 @@ struct BestSellerItemView: View {
                                     .padding(.horizontal, 4)
                                 ProgressView()
                             }
+                        }
+                        Text(model.title)
+                            .font(Font.markpro(.regular, size: 10))
+                            .offset(y: 1)
+                            .padding(.top, -10)
+                        HStack {
+                            Text("$\(model.discountPrice)")
+                                .font(Font.markpro(.bold, size: 16))
+                            Text("$\(model.priceWithoutDiscount)")
+                                .font(Font.markpro(.medium, size: 10))
+                                .foregroundColor(Color.ecColor(.itemGray))
+                                .strikethrough()
                         }
                     }
                     

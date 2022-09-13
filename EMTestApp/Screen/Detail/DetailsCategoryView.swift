@@ -18,7 +18,7 @@ struct DetailsCategoryView: View {
             HStack {
                 ForEach(categoryTabs, id: \.self, content: { item in
                         Button(action: {
-                            withAnimation(.easeInOut(duration: 0.3)) { selectedTab = item }
+                            withAnimation(.easeIn) { selectedTab = item }
                         }) {
                             VStack(spacing: 8) {
                                 Text(item)

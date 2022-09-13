@@ -29,7 +29,6 @@
 		32672A9D28C4D6E900CF975A /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672A9C28C4D6E900CF975A /* TabBarView.swift */; };
 		32672AA128C4E16F00CF975A /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672AA028C4E16F00CF975A /* FilterView.swift */; };
 		32672AA328C4FECC00CF975A /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672AA228C4FECC00CF975A /* CartView.swift */; };
-		32672AAA28C50CCB00CF975A /* SwiftUIBackports in Frameworks */ = {isa = PBXBuildFile; productRef = 32672AA928C50CCB00CF975A /* SwiftUIBackports */; };
 		32672AE728C8A04D00CF975A /* CartTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672AE628C8A04D00CF975A /* CartTopView.swift */; };
 		32672AEA28C8A8F300CF975A /* ECViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672AE928C8A8F300CF975A /* ECViewModel.swift */; };
 		32672AED28C8A9E600CF975A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672AEC28C8A9E600CF975A /* NetworkService.swift */; };
@@ -44,12 +43,13 @@
 		32672B0728CA3C5B00CF975A /* CartViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B0628CA3C5B00CF975A /* CartViewItem.swift */; };
 		32672B0F28CB513700CF975A /* DetailsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B0E28CB513700CF975A /* DetailsItemView.swift */; };
 		32672B1328CB530A00CF975A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B1228CB530A00CF975A /* View.swift */; };
-		32672B1828CB65FF00CF975A /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 32672B1728CB65FF00CF975A /* ACarousel */; };
 		32672B1A28CB76A400CF975A /* DetailsCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B1928CB76A400CF975A /* DetailsCategoryView.swift */; };
 		32672B1C28CB7D9600CF975A /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B1B28CB7D9600CF975A /* StarsView.swift */; };
 		32672B1E28CB7EAF00CF975A /* DetailsSpecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B1D28CB7EAF00CF975A /* DetailsSpecView.swift */; };
 		32672B2028CB86C200CF975A /* DetailsColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B1F28CB86C200CF975A /* DetailsColorView.swift */; };
 		32672B2228CB8E4B00CF975A /* DetailsCapacityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32672B2128CB8E4B00CF975A /* DetailsCapacityView.swift */; };
+		327A4C9828D1035F00AE9618 /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 327A4C9728D1035F00AE9618 /* ACarousel */; };
+		327A4C9B28D1039100AE9618 /* SwiftUIBackports in Frameworks */ = {isa = PBXBuildFile; productRef = 327A4C9A28D1039100AE9618 /* SwiftUIBackports */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,8 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32672B1828CB65FF00CF975A /* ACarousel in Frameworks */,
-				32672AAA28C50CCB00CF975A /* SwiftUIBackports in Frameworks */,
+				327A4C9B28D1039100AE9618 /* SwiftUIBackports in Frameworks */,
+				327A4C9828D1035F00AE9618 /* ACarousel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,8 +313,8 @@
 			);
 			name = EMTestApp;
 			packageProductDependencies = (
-				32672AA928C50CCB00CF975A /* SwiftUIBackports */,
-				32672B1728CB65FF00CF975A /* ACarousel */,
+				327A4C9728D1035F00AE9618 /* ACarousel */,
+				327A4C9A28D1039100AE9618 /* SwiftUIBackports */,
 			);
 			productName = EMTestApp;
 			productReference = 32672A6128B8ECE200CF975A /* EMTestApp.app */;
@@ -345,8 +345,8 @@
 			);
 			mainGroup = 32672A5828B8ECE200CF975A;
 			packageReferences = (
-				32672AA828C50CCB00CF975A /* XCRemoteSwiftPackageReference "SwiftUIBackports" */,
-				32672B1628CB65FF00CF975A /* XCRemoteSwiftPackageReference "ACarousel" */,
+				327A4C9628D1035F00AE9618 /* XCRemoteSwiftPackageReference "ACarousel" */,
+				327A4C9928D1039100AE9618 /* XCRemoteSwiftPackageReference "SwiftUIBackports" */,
 			);
 			productRefGroup = 32672A6228B8ECE200CF975A /* Products */;
 			projectDirPath = "";
@@ -623,15 +623,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		32672AA828C50CCB00CF975A /* XCRemoteSwiftPackageReference "SwiftUIBackports" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/shaps80/SwiftUIBackports";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		32672B1628CB65FF00CF975A /* XCRemoteSwiftPackageReference "ACarousel" */ = {
+		327A4C9628D1035F00AE9618 /* XCRemoteSwiftPackageReference "ACarousel" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JWAutumn/ACarousel";
 			requirement = {
@@ -639,18 +631,26 @@
 				minimumVersion = 0.2.0;
 			};
 		};
+		327A4C9928D1039100AE9618 /* XCRemoteSwiftPackageReference "SwiftUIBackports" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shaps80/SwiftUIBackports";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		32672AA928C50CCB00CF975A /* SwiftUIBackports */ = {
+		327A4C9728D1035F00AE9618 /* ACarousel */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 32672AA828C50CCB00CF975A /* XCRemoteSwiftPackageReference "SwiftUIBackports" */;
-			productName = SwiftUIBackports;
-		};
-		32672B1728CB65FF00CF975A /* ACarousel */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 32672B1628CB65FF00CF975A /* XCRemoteSwiftPackageReference "ACarousel" */;
+			package = 327A4C9628D1035F00AE9618 /* XCRemoteSwiftPackageReference "ACarousel" */;
 			productName = ACarousel;
+		};
+		327A4C9A28D1039100AE9618 /* SwiftUIBackports */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 327A4C9928D1039100AE9618 /* XCRemoteSwiftPackageReference "SwiftUIBackports" */;
+			productName = SwiftUIBackports;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
